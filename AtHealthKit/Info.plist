@@ -60,5 +60,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Allow this app to access to and share your health record on this device.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Allow this app to write data to your health record on this device.</string>
 </dict>
 </plist>

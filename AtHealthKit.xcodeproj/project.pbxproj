@@ -13,6 +13,8 @@
 		8C91417924E0E5B700FE2772 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C91417724E0E5B700FE2772 /* Main.storyboard */; };
 		8C91417B24E0E5B900FE2772 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C91417A24E0E5B900FE2772 /* Assets.xcassets */; };
 		8C91417E24E0E5B900FE2772 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C91417C24E0E5B900FE2772 /* LaunchScreen.storyboard */; };
+		8C91418824E0E5C500FE2772 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C91418724E0E5C500FE2772 /* HealthKit.framework */; };
+		8C91418A24E0E81500FE2772 /* Authorize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C91418924E0E81500FE2772 /* Authorize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,9 @@
 		8C91417A24E0E5B900FE2772 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C91417D24E0E5B900FE2772 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C91417F24E0E5B900FE2772 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C91418524E0E5C500FE2772 /* AtHealthKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AtHealthKit.entitlements; sourceTree = "<group>"; };
+		8C91418724E0E5C500FE2772 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		8C91418924E0E81500FE2772 /* Authorize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorize.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C91418824E0E5C500FE2772 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +48,7 @@
 			children = (
 				8C91417024E0E5B700FE2772 /* AtHealthKit */,
 				8C91416F24E0E5B700FE2772 /* Products */,
+				8C91418624E0E5C500FE2772 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +63,7 @@
 		8C91417024E0E5B700FE2772 /* AtHealthKit */ = {
 			isa = PBXGroup;
 			children = (
+				8C91418524E0E5C500FE2772 /* AtHealthKit.entitlements */,
 				8C91417124E0E5B700FE2772 /* AppDelegate.swift */,
 				8C91417324E0E5B700FE2772 /* SceneDelegate.swift */,
 				8C91417524E0E5B700FE2772 /* ViewController.swift */,
@@ -63,8 +71,17 @@
 				8C91417A24E0E5B900FE2772 /* Assets.xcassets */,
 				8C91417C24E0E5B900FE2772 /* LaunchScreen.storyboard */,
 				8C91417F24E0E5B900FE2772 /* Info.plist */,
+				8C91418924E0E81500FE2772 /* Authorize.swift */,
 			);
 			path = AtHealthKit;
+			sourceTree = "<group>";
+		};
+		8C91418624E0E5C500FE2772 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C91418724E0E5C500FE2772 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C91417624E0E5B700FE2772 /* ViewController.swift in Sources */,
+				8C91418A24E0E81500FE2772 /* Authorize.swift in Sources */,
 				8C91417224E0E5B700FE2772 /* AppDelegate.swift in Sources */,
 				8C91417424E0E5B700FE2772 /* SceneDelegate.swift in Sources */,
 			);
@@ -216,7 +234,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +288,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -284,6 +302,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AtHealthKit/AtHealthKit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GY7BG2G9TC;
 				INFOPLIST_FILE = AtHealthKit/Info.plist;
@@ -302,6 +321,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AtHealthKit/AtHealthKit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GY7BG2G9TC;
 				INFOPLIST_FILE = AtHealthKit/Info.plist;
